@@ -79,11 +79,11 @@
 
 <img id="userImage">
 
-<img id="shirt" class="outfit" src="https://i.imgur.com/7Q7Z8wB.png">
+<img id="shirt" class="outfit" src="images/shirt.png">
 
-<img id="dress" class="outfit" src="https://i.imgur.com/3ZQ3Z3M.png">
+<img id="dress" class="outfit" src="images/dress.png">
 
-<img id="jacket" class="outfit" src="https://i.imgur.com/5Q9V7fK.png">
+<img id="jacket" class="outfit" src="images/jacket.png">
 
 </div>
 
