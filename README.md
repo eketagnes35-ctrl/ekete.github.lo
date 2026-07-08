@@ -34,16 +34,16 @@
             width: 100%;
             height: 100%;
             object-fit: contain;
-        }
-
-        .outfit {
-            position: absolute;
-            top: 120px;
-            left: 80px;
-            width: 240px;
-            display: none;
-            opacity: 0.8;
-        }
+        } 
+.outfit {
+    position:absolute;
+    top:80px;
+    left:50%;
+    transform:translateX(-50%);
+    width:250px;
+    display:none;
+    pointer-events:none;
+}
 
         .choices img {
             width: 100px;
