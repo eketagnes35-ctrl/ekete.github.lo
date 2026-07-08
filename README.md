@@ -1,97 +1,132 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Portfolio</title>
+    <title>Virtual Try-On Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .container {
+            width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 15px;
+        }
+
+        .tryon-area {
+            position: relative;
+            width: 400px;
+            height: 500px;
+            margin: 20px auto;
+            border: 2px solid #ccc;
+            overflow: hidden;
+        }
+
+        #userImage {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        .outfit {
+            position: absolute;
+            top: 120px;
+            left: 80px;
+            width: 240px;
+            display: none;
+            opacity: 0.8;
+        }
+
+        .choices img {
+            width: 100px;
+            height: 120px;
+            object-fit: contain;
+            border: 2px solid transparent;
+            cursor: pointer;
+            margin: 10px;
+        }
+
+        .choices img:hover {
+            border: 2px solid black;
+        }
+
+        input {
+            margin: 20px;
+        }
+    </style>
 </head>
 
 <body>
 
-    <header>
-        <h1>John Doe</h1>
-        <p>Web Developer | Designer | Creative Thinker</p>
+<div class="container">
 
-        <hr>
-        
-        <nav>
-            <a href="#about">About</a> |
-            <a href="#skills">Skills</a> |
-            <a href="#projects">Projects</a> |
-            <a href="#contact">Contact</a>
-        </nav>
+<h1>Virtual Try-On Fashion Store</h1>
 
-        <hr>
-    </header>
+<p>Upload your photo:</p>
+
+<input type="file" accept="image/*" onchange="loadImage(event)">
 
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            Hello! I am John Doe, a passionate web developer who loves creating
-            simple and useful websites. I enjoy learning new technologies and
-            building creative digital experiences.
-        </p>
-    </section>
+<div class="tryon-area">
+
+<img id="userImage">
+
+<img id="shirt" class="outfit" src="https://i.imgur.com/7Q7Z8wB.png">
+
+<img id="dress" class="outfit" src="https://i.imgur.com/3ZQ3Z3M.png">
+
+<img id="jacket" class="outfit" src="https://i.imgur.com/5Q9V7fK.png">
+
+</div>
 
 
-    <section id="skills">
-        <h2>My Skills</h2>
+<h2>Select Outfit</h2>
 
-        <ul>
-            <li>HTML</li>
-            <li>Web Design</li>
-            <li>Programming</li>
-            <li>Problem Solving</li>
-            <li>UI/UX Design</li>
-        </ul>
-    </section>
+<div class="choices">
 
+<img src="https://i.imgur.com/7Q7Z8wB.png" onclick="showOutfit('shirt')">
 
-    <section id="projects">
-        <h2>My Projects</h2>
+<img src="https://i.imgur.com/3ZQ3Z3M.png" onclick="showOutfit('dress')">
 
-        <article>
-            <h3>Project 1: Personal Website</h3>
-            <p>
-                A personal website created to showcase my skills and experience.
-            </p>
-        </article>
+<img src="https://i.imgur.com/5Q9V7fK.png" onclick="showOutfit('jacket')">
 
-        <article>
-            <h3>Project 2: Blog Website</h3>
-            <p>
-                A simple blog website where users can read and share articles.
-            </p>
-        </article>
-
-        <article>
-            <h3>Project 3: Calculator</h3>
-            <p>
-                A basic calculator application built for practicing programming.
-            </p>
-        </article>
-
-    </section>
+</div>
 
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-
-        <p>Email: johndoe@example.com</p>
-        <p>Phone: +1234567890</p>
-
-        <p>
-            Social Media:
-            <a href="#">LinkedIn</a> |
-            <a href="#">GitHub</a>
-        </p>
-    </section>
+</div>
 
 
-    <footer>
-        <hr>
-        <p>&copy; 2026 John Doe. All Rights Reserved.</p>
-    </footer>
+<script>
+
+function loadImage(event){
+
+    let image = document.getElementById("userImage");
+
+    image.src = URL.createObjectURL(event.target.files[0]);
+
+}
+
+
+function showOutfit(id){
+
+    document.querySelectorAll(".outfit").forEach(function(item){
+        item.style.display="none";
+    });
+
+    document.getElementById(id).style.display="block";
+
+}
+
+</script>
 
 
 </body>
-</html># ekete.github.lo
+</html>
