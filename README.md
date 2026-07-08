@@ -92,11 +92,11 @@
 
 <div class="choices">
 
-<img src="https://i.imgur.com/7Q7Z8wB.png" onclick="showOutfit('shirt')">
+<img src="images/shirt.png" onclick="showOutfit('shirt')">
 
-<img src="https://i.imgur.com/3ZQ3Z3M.png" onclick="showOutfit('dress')">
+<img src="images/dress.png" onclick="showOutfit('dress')">
 
-<img src="https://i.imgur.com/5Q9V7fK.png" onclick="showOutfit('jacket')">
+<img src="images/jacket.png" onclick="showOutfit('jacket')">
 
 </div>
 
