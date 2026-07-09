@@ -1,4 +1,74 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Affiliate Advertisement</title>
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:#f4f4f4;
+}
+
+.ad-container{
+    width:320px;
+    margin:40px auto;
+    padding:15px;
+    background:white;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.ad-title{
+    font-size:20px;
+    color:#333;
+    margin-bottom:10px;
+}
+
+.ad-box{
+    width:300px;
+    height:250px;
+    background:#eee;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:auto;
+    border:2px dashed #999;
+    color:#777;
+}
+
+.ad-note{
+    margin-top:15px;
+    font-size:14px;
+    color:#555;
+}
+</style>
+
+</head>
+<body>
+
+<div class="ad-container">
+
+<h2 class="ad-title">Sponsored Advertisement</h2>
+
+<div class="ad-box">
+
+<!-- Replace this with your affiliate ad code -->
+
+<p>Your Affiliate Ad Appears Here</p>
+
+</div>
+
+<p class="ad-note">
+By interacting with this advertisement, you help support our website.
+</p>
+
+</div>
+
+</body>
+</html><!DOCTYPE html>
 <html>
 <head>
     <title>Virtual Try-On Demo</title>
